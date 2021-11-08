@@ -7,7 +7,7 @@ digits.target
 digits.images
 '''
 digits = load_digits()
-#print(digits.DESCR)
+print(digits.DESCR)
 #print(digits.data[5]) #raw data in the array
 #print(digits.target[5]) #what the data points to
 
@@ -27,7 +27,7 @@ for item in zip(axes.ravel(), digits.images, digits.target):
     axes.set_title(target)
 
 plt.tight_layout
-#plt.show()
+plt.show()
 
 from sklearn.model_selection import train_test_split
 
@@ -72,5 +72,4 @@ figure = plt2.figure(figsize=(7,6))
 axes = sns.heatmap(confusion_df, annot=True, cmap=plt2.cm.nipy_spectral_r)
 
 plt2.show()
-
 
